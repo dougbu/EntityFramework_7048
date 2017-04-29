@@ -15,6 +15,13 @@ namespace EntityFramework_7048
             {
                 context.Database.EnsureCreated();
 
+                var match = new Supplier
+                {
+                    Name = "Joe",
+                };
+
+                context.Add(match);
+                context.SaveChanges();
                 var suppliers = context.Suppliers
                     .OrderBy(x => x.Name)
                     .Select(x => new
@@ -47,7 +54,7 @@ namespace EntityFramework_7048
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=aspnet-EntityFramework_7048;Trusted_Connection=True;MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlite("Data Source=EntityFramework_7048.db");
         }
     }
 }
