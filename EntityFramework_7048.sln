@@ -1,9 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26222.1
+VisualStudioVersion = 15.0.27016.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework_7048", "EntityFramework_7048\EntityFramework_7048.csproj", "{06A867D6-130D-4BB1-926A-7A28D61FB385}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework_7048", "EntityFramework_7048\EntityFramework_7048.csproj", "{06A867D6-130D-4BB1-926A-7A28D61FB385}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5B595909-EE49-4B4D-B43F-7639BB7537E9}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet.config = NuGet.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +23,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3735D97-E913-4C86-B46A-F31917387DAD}
 	EndGlobalSection
 EndGlobal

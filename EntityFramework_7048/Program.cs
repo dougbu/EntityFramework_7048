@@ -22,6 +22,8 @@ namespace EntityFramework_7048
 
                 context.Add(match);
                 context.SaveChanges();
+
+                // See aspnet/EntityFrameworkCore#7048
                 var suppliers = context.Suppliers
                     .OrderBy(x => x.Name)
                     .Select(x => new
@@ -30,8 +32,8 @@ namespace EntityFramework_7048
                         Value = x.Id.ToString(),
                     })
                     .ToList();
+                Console.WriteLine($"Aggregated supplier count: {suppliers.Count}.");
 
-                Console.WriteLine(suppliers.Count);
             }
         }
     }
